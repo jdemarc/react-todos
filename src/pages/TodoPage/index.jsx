@@ -6,10 +6,10 @@ const TodoPage = () => {
   return (
     <div className="tp-wrapper">
       <div className="header">
-        <div> TODO </div>
-        <div> (: </div>
+        <div> T O D O </div>
+        <div> X </div>
       </div>
-      
+
       <InputBar />
       <TodoList />
     </div>

@@ -2,11 +2,13 @@
   width: 40%;
   border: 5px solid green;
   background: gray;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .header {
   display: flex;
   color: white;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-size: 35px;
+  font-weight: 700;
 }
