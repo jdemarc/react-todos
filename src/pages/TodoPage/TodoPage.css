@@ -1,0 +1,12 @@
+.tp-wrapper {
+  width: 40%;
+  border: 5px solid green;
+  background: gray;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+}
