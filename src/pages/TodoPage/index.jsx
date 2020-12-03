@@ -2,16 +2,18 @@ import InputBar from '../../components/InputBar';
 import TodoList from '../../components/TodoList';
 import './TodoPage.css';
 
-const TodoPage = () => {
+const TodoPage = ( {todos} ) => {
   return (
     <div className="tp-wrapper">
       <div className="header">
         <div> T O D O </div>
-        <div> X </div>
+        <div>x</div>
       </div>
 
       <InputBar />
-      <TodoList />
+      <TodoList
+        todos={todos}
+      />
     </div>
   );
 }

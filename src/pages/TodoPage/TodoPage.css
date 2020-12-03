@@ -1,7 +1,6 @@
 .tp-wrapper {
-  width: 40%;
-  border: 5px solid green;
-  background: gray;
+  width: 50%;
+  border: 1px solid green;
   margin: 5% auto;
 }
 
@@ -11,4 +10,5 @@
   justify-content: space-between;
   font-size: 35px;
   font-weight: 700;
+  padding: 20px;
 }

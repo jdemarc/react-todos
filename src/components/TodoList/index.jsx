@@ -1,7 +1,9 @@
-const TodoList = () => {
+const TodoList = ( {todos} ) => {
   return (
     <div>
-      TodoList Component
+      {todos.map((todo) => (
+        <li>{todo}</li>
+      ))}
     </div>
   );
 }
