@@ -9,6 +9,8 @@ const App = () => {
     'Swim in the ocean'
   ]);
 
+  const [todo, setTodo] = useState('');
+
 
   // useEffect(() => {
 
@@ -25,8 +27,9 @@ const App = () => {
   return (
     <div className="App">
         <TodoPage
+          todo={todo}
           todos={todos}
-          setTodos={setTodos}
+          setTodo={setTodo}
           handleSubmit={handleSubmit}
         />
     </div>
