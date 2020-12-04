@@ -18,8 +18,10 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const newTodo = e.target.value;
 
-    // setTodos;
+    setTodos([...todos, newTodo]);
   }
 
 
