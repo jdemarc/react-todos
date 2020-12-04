@@ -8,11 +8,13 @@ const App = () => {
     [
       {
         description: 'Walk the dog.',
-        active: true
+        active: true,
+        completed: false
       },
       {
         description: 'Swim in the ocean',
-        active: true
+        active: true,
+        completed: false
       }
     ]
   );
@@ -29,7 +31,8 @@ const App = () => {
     
     const newTodo = {
       description: e.target.value,
-      active: true
+      active: true,
+      completed: false
     }
 
     setTodos([...todos, newTodo]);
