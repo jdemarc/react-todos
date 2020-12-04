@@ -22,6 +22,7 @@ const App = () => {
     const newTodo = e.target.value;
 
     setTodos([...todos, newTodo]);
+    setTodo('');
   }
 
 
