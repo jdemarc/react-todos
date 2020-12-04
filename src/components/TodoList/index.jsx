@@ -1,10 +1,10 @@
-const TodoList = ( {todos} ) => {
+const TodoList = ( {todos, onRemoveTodo} ) => {
   return (
     <div>
         {todos.map((todo, idx) => (
           <div key={idx}>
             {todo.description}
-            <button>X</button>
+            <button onClick={() => onRemoveTodo(todo.description)}>X</button>
           </div>
         ))}
     </div>

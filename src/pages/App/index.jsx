@@ -39,9 +39,17 @@ const App = () => {
     setTodo('');
   }
 
+  const onRemoveTodo = (desc) => {
+    // Filter the list for all todos without the given description.
+    const updatedTodos = todos.filter((todo) => todo.description !== desc);
+
+    setTodos(updatedTodos);
+  }
+
   const applyStrikethrough = () => {
 
   }
+
 
   return (
     <div className="App">
@@ -50,6 +58,7 @@ const App = () => {
           todos={todos}
           setTodo={setTodo}
           handleSubmit={handleSubmit}
+          onRemoveTodo={onRemoveTodo}
         />
     </div>
   );
