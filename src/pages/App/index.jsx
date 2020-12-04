@@ -4,10 +4,18 @@ import TodoPage from '../TodoPage';
 
 const App = () => {
 
-  const [todos, setTodos] = useState([
-    'Walk the dog.',
-    'Swim in the ocean'
-  ]);
+  const [todos, setTodos] = useState(
+    [
+      {
+        description: 'Walk the dog.',
+        active: true
+      },
+      {
+        description: 'Swim in the ocean',
+        active: true
+      }
+    ]
+  );
 
   const [todo, setTodo] = useState('');
 
@@ -19,13 +27,18 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const newTodo = e.target.value;
+    const newTodo = {
+      description: e.target.value,
+      active: true
+    }
 
     setTodos([...todos, newTodo]);
     setTodo('');
   }
 
+  const applyStrikethrough = () => {
 
+  }
 
   return (
     <div className="App">
