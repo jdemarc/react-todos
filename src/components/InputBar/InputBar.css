@@ -1,24 +1,37 @@
 .input-box {
   display: flex;
   width: 100%;
-  background-color: hsl(237, 14%, 26%);
+  background-color: hsl(235, 24%, 19%);
   border-radius: 5px;
+  margin: 20px 0;
 }
 
 input[type=text] {
-  width: 80%;
-  padding: 10px;
+  width: 90%;
+  padding: 7px 0;
   background: transparent;
   border: none;
   outline: none;
-  color: hsl(234, 39%, 85%);
+  color: hsl(236, 33%, 92%);
+  /* line-height: 1.8; */
+  font-size: 15px;
 
   
-  /* background-color: hsl(235, 21%, 11%); */ 
-  /* background-color: hsl(235, 24%, 19%); */
-  /* background-color: hsl(234, 39%, 85%); */
-  /* background-color: hsl(236, 33%, 92%); */
-  /* background-color: hsl(234, 11%, 52%); */
-  /* background-color: hsl(233, 14%, 35%);*/
+  /* background-color: hsl(235, 21%, 11%); 
+  background-color: hsl(235, 24%, 19%);
+  background-color: hsl(234, 39%, 85%);
+  background-color: hsl(236, 33%, 92%);
+  background-color: hsl(234, 11%, 52%);
+  background-color: hsl(233, 14%, 35%); */
 }
 
+.btn {
+  display:block;
+  width:18px;
+  height:18px;
+  border: 1px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  margin: 10px auto;
+}
