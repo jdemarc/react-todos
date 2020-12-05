@@ -3,7 +3,7 @@ import './InputBar.css';
 const InputBar = ( { todo, setTodo, handleSubmit } ) => {
   
   return (
-    <div className="input-field">
+    <div className="input-box">
         <input type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}

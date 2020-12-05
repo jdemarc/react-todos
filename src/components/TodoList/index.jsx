@@ -5,15 +5,23 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
           <div 
           className="todo-el"
           key={idx}>
-            <button onClick={() => handleToggleComplete(todo.description)}>O</button>
+            <button 
+              className="complete"
+              onClick={() => handleToggleComplete(todo.description)}>
+                O
+            </button>
             <span
               style={{
                 textDecoration: todo.completed ? 'line-through' : 'none'
               }}
             >
-            {todo.description}
+              {todo.description}
             </span>
-            <button onClick={() => handleRemoveTodo(todo.description)}>X</button>
+            <button 
+              className="remove"
+              onClick={() => handleRemoveTodo(todo.description)}>
+                X
+            </button>
           </div>
         ))}
     </div>
