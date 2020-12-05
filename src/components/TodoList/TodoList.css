@@ -1,0 +1,29 @@
+.todo-el {
+  display: flex;
+  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  border-radius: 5px;
+}
+
+.todo-wrapper {
+  display: flex;
+  width: 90%;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(236, 33%, 92%);
+}
+
+.complete {
+  width:18px;
+  height:18px;
+  border: 1px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  margin: 10px auto;
+}
+
+.complete:hover {
+  border: 1px solid hsl(220, 98%, 61%);
+}
