@@ -36,18 +36,27 @@ const App = () => {
     }
 
     setTodos([...todos, newTodo]);
+
+    // Clear input box.
     setTodo('');
   }
 
-  const onRemoveTodo = (desc) => {
+  const handleRemoveTodo = (desc) => {
     // Filter the list for all todos without the given description.
     const updatedTodos = todos.filter((todo) => todo.description !== desc);
 
     setTodos(updatedTodos);
   }
 
-  const applyStrikethrough = () => {
+  const handleToggleComplete = (desc) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.description === desc) {
+        todo.completed = !todo.completed
+      }
+      return todo;
+    })
 
+    setTodos(updatedTodos);
   }
 
 
@@ -58,7 +67,8 @@ const App = () => {
           todos={todos}
           setTodo={setTodo}
           handleSubmit={handleSubmit}
-          onRemoveTodo={onRemoveTodo}
+          handleRemoveTodo={handleRemoveTodo}
+          handleToggleComplete={handleToggleComplete}
         />
     </div>
   );

@@ -2,7 +2,7 @@ import InputBar from '../../components/InputBar';
 import TodoList from '../../components/TodoList';
 import './TodoPage.css';
 
-const TodoPage = ( {todo, setTodo, todos, handleSubmit, onRemoveTodo} ) => {
+const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handleToggleComplete} ) => {
   return (
     <div className="tp-wrapper">
       <div className="header">
@@ -17,7 +17,8 @@ const TodoPage = ( {todo, setTodo, todos, handleSubmit, onRemoveTodo} ) => {
       />
       <TodoList
         todos={todos}
-        onRemoveTodo={onRemoveTodo}
+        handleRemoveTodo={handleRemoveTodo}
+        handleToggleComplete={handleToggleComplete}
       />
 
     </div>

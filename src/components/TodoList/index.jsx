@@ -1,10 +1,19 @@
-const TodoList = ( {todos, onRemoveTodo} ) => {
+const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
   return (
     <div>
         {todos.map((todo, idx) => (
-          <div key={idx}>
+          <div 
+          className="todo-el"
+          key={idx}>
+            <button onClick={() => handleToggleComplete(todo.description)}>O</button>
+            <span
+              style={{
+                textDecoration: todo.completed ? 'line-through' : 'none'
+              }}
+            >
             {todo.description}
-            <button onClick={() => onRemoveTodo(todo.description)}>X</button>
+            </span>
+            <button onClick={() => handleRemoveTodo(todo.description)}>X</button>
           </div>
         ))}
     </div>
