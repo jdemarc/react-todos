@@ -13,6 +13,14 @@
   color: hsl(236, 33%, 92%);
 }
 
+.btn-todo-wrapper:hover + .remove-btn {
+  display: block;
+}
+
+.remove-btn:hover {
+  display: block;
+}
+
 .incomplete, .complete {
   width:18px;
   height:18px;
@@ -46,16 +54,11 @@
 
   
   width: 20px;
-  height: 20px;
-  margin: 10px 20px;
+  padding: 10px 20px;
 
-  /* visibility: hidden; */
+  display: none;
 }
 
 span {
   cursor: pointer;
-}
-
-.btn-todo-wrapper:hover + .remove-btn {
-  visibility: visible;
 }

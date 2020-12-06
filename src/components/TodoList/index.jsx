@@ -18,7 +18,6 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
                 className={todo.completed ? 'complete' : 'incomplete'}
               />
 
-            <div className="">
               <span
                 style={{
                   textDecoration: todo.completed ? 'line-through' : 'none',
@@ -27,13 +26,14 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
               >
                 {todo.description}
               </span>
-              </div>
+
             </div>
             
-            <button 
+            <button
               className="remove-btn"
-              onClick={() => handleRemoveTodo(todo.description)}>
-            </button>
+              onClick={() => handleRemoveTodo(todo.description)}
+            />
+
           </div>
         ))}
     </div>
