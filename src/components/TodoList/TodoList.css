@@ -30,6 +30,7 @@
 
 .complete {
   background: url('../../assets/icon-check.svg');
-  
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: hsl(220, 98%, 61%);
 }
