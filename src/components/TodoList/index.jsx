@@ -7,14 +7,18 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
         {todos.map((todo, idx) => (
           <div 
           className="todo-el"
-          key={idx}>
-            <button 
-              className={todo.completed ? 'complete' : 'incomplete'}
+          key={idx}
+          >
+
+            <div
+              className="btn-todo-wrapper"
               onClick={() => handleToggleComplete(todo.description)}
             >
-            </button>
+              <button 
+                className={todo.completed ? 'complete' : 'incomplete'}
+              />
 
-            <div className="todo-wrapper">
+            <div className="">
               <span
                 style={{
                   textDecoration: todo.completed ? 'line-through' : 'none',
@@ -23,12 +27,14 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
               >
                 {todo.description}
               </span>
-              <button 
-                className="remove"
-                onClick={() => handleRemoveTodo(todo.description)}>
-                  X
-              </button>
+              </div>
             </div>
+            
+            <button 
+              className="remove"
+              onClick={() => handleRemoveTodo(todo.description)}>
+                  X
+            </button>
           </div>
         ))}
     </div>
