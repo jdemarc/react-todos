@@ -1,6 +1,7 @@
 import './TodoList.css';
 
 const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
+
   return (
     <div>
         {todos.map((todo, idx) => (
@@ -8,8 +9,9 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
           className="todo-el"
           key={idx}>
             <button 
-              className="complete"
-              onClick={() => handleToggleComplete(todo.description)}>
+              className={todo.completed ? 'complete' : 'incomplete'}
+              onClick={() => handleToggleComplete(todo.description)}
+            >
             </button>
 
             <div className="todo-wrapper">
