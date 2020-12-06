@@ -23,15 +23,6 @@
   margin: 10px 20px;
 }
 
-.incomplete:hover {
-  cursor: pointer;
-  border: 1px solid hsl(220, 98%, 61%);
-}
-
-span {
-  cursor: pointer;
-}
-
 .complete {
   background: url('../../assets/icon-check.svg');
   background-repeat: no-repeat;
@@ -39,6 +30,32 @@ span {
   background-color: hsl(220, 98%, 61%);
 }
 
-.remove:hover {
-  background: red;
+.incomplete:hover {
+  cursor: pointer;
+  border: 1px solid hsl(220, 98%, 61%);
+}
+
+.remove-btn {
+  background: url("../../assets/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: gray;
+
+  
+  width: 20px;
+  height: 20px;
+  margin: 10px 20px;
+
+  /* visibility: hidden; */
+}
+
+span {
+  cursor: pointer;
+}
+
+.btn-todo-wrapper:hover + .remove-btn {
+  visibility: visible;
 }

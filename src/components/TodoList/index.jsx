@@ -31,9 +31,8 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
             </div>
             
             <button 
-              className="remove"
+              className="remove-btn"
               onClick={() => handleRemoveTodo(todo.description)}>
-                  X
             </button>
           </div>
         ))}
