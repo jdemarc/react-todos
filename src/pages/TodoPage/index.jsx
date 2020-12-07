@@ -1,5 +1,7 @@
+import ActionBar from '../../components/ActionBar';
 import InputBar from '../../components/InputBar';
 import TodoList from '../../components/TodoList';
+
 import './TodoPage.css';
 
 const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handleToggleComplete} ) => {
@@ -19,6 +21,8 @@ const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handle
         todos={todos}
         handleRemoveTodo={handleRemoveTodo}
         handleToggleComplete={handleToggleComplete}
+      />
+      <ActionBar
       />
 
     </div>
