@@ -1,11 +1,11 @@
 import './ActionBar.css';
 
-const ActionBar = () => {
+const ActionBar = ( {todos} ) => {
   
   return (
     <div className="action-bar">
       <div>
-        5 todos left
+        {todos.length} items left
       </div>
 
       <div>
