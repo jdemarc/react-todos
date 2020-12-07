@@ -7,7 +7,7 @@ const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handle
     <div className="tp-wrapper">
       <div className="header">
         <div> T O D O </div>
-        <div>x</div>
+        <button id="mode-toggle"></button>
       </div>
 
       <InputBar

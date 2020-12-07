@@ -12,7 +12,17 @@ const App = () => {
         completed: false
       },
       {
-        description: 'Swim in the ocean',
+        description: 'Swim in the ocean.',
+        active: true,
+        completed: false
+      },
+      {
+        description: 'Sail the seven seas.',
+        active: true,
+        completed: false
+      },
+      {
+        description: 'Tip cows.',
         active: true,
         completed: false
       }

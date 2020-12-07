@@ -9,5 +9,17 @@
   justify-content: space-between;
   font-size: 35px;
   font-weight: 700;
+  /* margin-top: 20px; */
+  /* padding: 20px; */
+  padding-top: 20px;
+}
+
+#mode-toggle {
+  background: url("../../assets/icon-moon.svg");
   padding: 20px;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  border: none;
 }
