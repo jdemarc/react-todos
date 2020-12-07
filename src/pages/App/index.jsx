@@ -69,6 +69,12 @@ const App = () => {
     setTodos(updatedTodos);
   }
 
+  const handleClearComplete = () => {
+    const incompleteTodos = todos.filter((todo) => todo.completed !== true);
+
+    setTodos(incompleteTodos);
+  }
+
 
   return (
     <div className="App">
@@ -79,6 +85,7 @@ const App = () => {
           handleSubmit={handleSubmit}
           handleRemoveTodo={handleRemoveTodo}
           handleToggleComplete={handleToggleComplete}
+          handleClearComplete={handleClearComplete}
         />
     </div>
   );

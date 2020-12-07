@@ -1,4 +1,3 @@
-import ActionBar from '../ActionBar';
 import './TodoList.css';
 
 const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
@@ -37,9 +36,6 @@ const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
 
           </div>
         ))}
-      <ActionBar 
-        todos={todos}
-      />
     </div>
   );
 }
