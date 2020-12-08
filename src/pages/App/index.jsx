@@ -30,6 +30,7 @@ const App = () => {
   );
 
   const [todo, setTodo] = useState('');
+  const [count, setCount] = useState(0);
 
   const [displayedTodos, setDisplayedTodos] = useState([...todos]);
 
@@ -95,6 +96,7 @@ const App = () => {
   return (
     <div className="App">
         <TodoPage
+          count={count}
           todo={todo}
           todos={todos}
           displayedTodos={displayedTodos}

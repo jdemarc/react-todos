@@ -27,7 +27,7 @@ const TodoPage = ( props ) => {
         handleToggleComplete={props.handleToggleComplete}
       />
       <ActionBar
-        count={props.todos.length}
+        count={props.count}
         handleClearComplete={props.handleClearComplete}
         handleAllFilter={props.handleAllFilter}
         handleActiveFilter={props.handleActiveFilter}
