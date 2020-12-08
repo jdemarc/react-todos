@@ -33,6 +33,9 @@ const App = () => {
 
   const [displayedTodos, setDisplayedTodos] = useState([...todos]);
 
+  useEffect(() => {
+    setDisplayedTodos(todos);
+  }, [todos])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,6 +74,7 @@ const App = () => {
     const incompleteTodos = todos.filter((todo) => todo.completed !== true);
 
     setTodos(incompleteTodos);
+    setDisplayedTodos(incompleteTodos);
   }
 
   const handleCompletedFilter = () => {
@@ -81,8 +85,6 @@ const App = () => {
 
   const handleActiveFilter = () => {
     const activeTodos = todos.filter((todo) => todo.completed === false);
-
-    console.log(activeTodos);
 
     setDisplayedTodos(activeTodos);
   }
