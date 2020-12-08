@@ -11,12 +11,12 @@
 
 .actionable-wrapper {
   display: flex;
-  width: 25%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.actionable, .count-info{
+.actionable, .count-info {
   color: gray;
+  padding: 3px;
 }
 
 .actionable:hover {
