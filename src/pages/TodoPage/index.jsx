@@ -4,7 +4,10 @@ import TodoList from '../../components/TodoList';
 
 import './TodoPage.css';
 
-const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handleToggleComplete, handleClearComplete} ) => {
+const TodoPage = ( props ) => {
+
+  // Rename props ?
+
   return (
     <div className="tp-wrapper">
       <div className="header">
@@ -13,17 +16,21 @@ const TodoPage = ( {todo, setTodo, todos, handleSubmit, handleRemoveTodo, handle
       </div>
 
       <InputBar
-        todo={todo}
-        setTodo={setTodo}
-        handleSubmit={handleSubmit}
+        todo= {props.todo}
+        setTodo={props.setTodo}
+        handleSubmit={props.handleSubmit}
       />
       <TodoList
-        todos={todos}
-        handleRemoveTodo={handleRemoveTodo}
-        handleToggleComplete={handleToggleComplete}
+        todos={props.todos}
+        displayedTodos={props.displayedTodos}
+        handleRemoveTodo={props.handleRemoveTodo}
+        handleToggleComplete={props.handleToggleComplete}
       />
       <ActionBar
-        handleClearComplete={handleClearComplete}
+        handleClearComplete={props.handleClearComplete}
+        handleAllFilter={props.handleAllFilter}
+        handleActiveFilter={props.handleActiveFilter}
+        handleCompletedFilter={props.handleCompletedFilter}
       />
 
     </div>

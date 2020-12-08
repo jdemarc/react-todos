@@ -1,6 +1,6 @@
 import './ActionBar.css';
 
-const ActionBar = ( {handleClearComplete} ) => {
+const ActionBar = ( {handleClearComplete, handleAllFilter, handleActiveFilter, handleCompletedFilter} ) => {
   
   return (
     <div className="action-bar">
@@ -9,11 +9,28 @@ const ActionBar = ( {handleClearComplete} ) => {
       </div>
 
       <div>
-        All Active Completed
+        <div
+          className="actionable"
+          onClick={() => handleAllFilter()}
+        >
+          All
+        </div>
+        <div
+          className="actionable"
+          onClick={() => handleActiveFilter()}
+        >
+          Active
+        </div>
+        <div
+          className="actionable"
+          onClick={() => handleCompletedFilter()}
+        >
+          Completed
+        </div>
       </div>
 
       <div
-        className="clear-completed"
+        className="actionable"
         onClick={() => handleClearComplete()}
         >
           Clear Completed

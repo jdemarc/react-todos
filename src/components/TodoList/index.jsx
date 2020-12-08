@@ -1,10 +1,10 @@
 import './TodoList.css';
 
-const TodoList = ( {todos, handleRemoveTodo, handleToggleComplete} ) => {
+const TodoList = ( {displayedTodos, handleRemoveTodo, handleToggleComplete} ) => {
 
   return (
     <div>
-        {todos.map((todo, idx) => (
+        {displayedTodos.map((todo, idx) => (
           <div 
           className="todo-el"
           key={idx}

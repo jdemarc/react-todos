@@ -31,10 +31,8 @@ const App = () => {
 
   const [todo, setTodo] = useState('');
 
+  const [displayedTodos, setDisplayedTodos] = useState([...todos]);
 
-  // useEffect(() => {
-
-  // }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,17 +73,38 @@ const App = () => {
     setTodos(incompleteTodos);
   }
 
+  const handleCompletedFilter = () => {
+    const completedTodos = todos.filter((todo) => todo.completed === true);
+
+    setDisplayedTodos(completedTodos);
+  }
+
+  const handleActiveFilter = () => {
+    const activeTodos = todos.filter((todo) => todo.completed === false);
+
+    console.log(activeTodos);
+
+    setDisplayedTodos(activeTodos);
+  }
+
+  const handleAllFilter = () => {
+    setDisplayedTodos(todos);
+  }
 
   return (
     <div className="App">
         <TodoPage
           todo={todo}
           todos={todos}
+          displayedTodos={displayedTodos}
           setTodo={setTodo}
           handleSubmit={handleSubmit}
           handleRemoveTodo={handleRemoveTodo}
           handleToggleComplete={handleToggleComplete}
           handleClearComplete={handleClearComplete}
+          handleCompletedFilter={handleCompletedFilter}
+          handleActiveFilter={handleActiveFilter}
+          handleAllFilter={handleAllFilter}
         />
     </div>
   );

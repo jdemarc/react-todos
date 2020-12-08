@@ -9,11 +9,11 @@
   padding: 10px 20px;
 }
 
-.clear-completed {
+.actionable{
   color: gray;
 }
 
-.clear-completed:hover {
+.actionable:hover {
   cursor: pointer;
   color: hsl(220, 98%, 61%);
 }
