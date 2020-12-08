@@ -1,14 +1,14 @@
 import './ActionBar.css';
 
-const ActionBar = ( {handleClearComplete, handleAllFilter, handleActiveFilter, handleCompletedFilter} ) => {
+const ActionBar = ( {count, handleClearComplete, handleAllFilter, handleActiveFilter, handleCompletedFilter} ) => {
   
   return (
     <div className="action-bar">
-      <div>
-        999 items left
+      <div className="count-info">
+        {count} items left
       </div>
 
-      <div>
+      <div className="actionable-wrapper">
         <div
           className="actionable"
           onClick={() => handleAllFilter()}

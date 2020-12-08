@@ -9,7 +9,13 @@
   padding: 10px 20px;
 }
 
-.actionable{
+.actionable-wrapper {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.actionable, .count-info{
   color: gray;
 }
 
