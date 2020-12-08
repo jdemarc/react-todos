@@ -74,7 +74,6 @@ const App = () => {
     const incompleteTodos = todos.filter((todo) => todo.completed !== true);
 
     setTodos(incompleteTodos);
-    setDisplayedTodos(incompleteTodos);
   }
 
   const handleCompletedFilter = () => {
