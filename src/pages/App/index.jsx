@@ -35,6 +35,7 @@ const App = () => {
   const [displayedTodos, setDisplayedTodos] = useState([...todos]);
 
   useEffect(() => {
+    setCount(calcCompleted());
     setDisplayedTodos(todos);
   }, [todos])
 
@@ -51,6 +52,12 @@ const App = () => {
 
     // Clear input box.
     setTodo('');
+  }
+
+  const calcCompleted = () => {
+    const c = todos.filter((todo) => todo.completed !== true);
+    
+    return c.length;
   }
 
   const handleRemoveTodo = (desc) => {
