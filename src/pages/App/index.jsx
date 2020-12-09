@@ -79,7 +79,7 @@ const App = () => {
   }
 
   const handleClearComplete = () => {
-    const incompleteTodos = todos.filter((todo) => todo.completed !== true);
+    const incompleteTodos = todos.filter((todo) => todo.completed === false);
 
     setTodos(incompleteTodos);
   }
